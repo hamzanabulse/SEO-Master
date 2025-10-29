@@ -73,6 +73,51 @@ npm run build
 npm start
 ```
 
+## 🌐 Hosting & Deployment
+
+The easiest way to host this Next.js 14 App Router project (with Edge OG images) is Vercel.
+
+### Option A — Vercel Git Integration (recommended)
+1. Go to https://vercel.com/import/git and connect your GitHub account.
+2. Select the repo: `hamzanabulse/SEO-Master`.
+3. Framework preset: Next.js (auto-detected).
+4. Environment Variable: add `NEXT_PUBLIC_SITE_URL` set to your live URL (e.g. `https://seo-master-hub.vercel.app` or your custom domain).
+5. Deploy. Vercel will build and host automatically on every push to `main`.
+
+Notes:
+- Dynamic Open Graph image routes (app/*/opengraph-image.tsx) run on Edge runtime and work out-of-the-box on Vercel.
+- Add your custom domain in Vercel → Project → Domains and set it as primary.
+
+### Option B — GitHub Actions to Vercel (pre-configured)
+This repo includes `.github/workflows/deploy-vercel.yml`.
+
+To enable it:
+1. Create a project on Vercel and link it to this repository (or create it via the dashboard).
+2. In your Vercel project settings, find and copy:
+   - `VERCEL_ORG_ID`
+   - `VERCEL_PROJECT_ID`
+   - Generate a `VERCEL_TOKEN` (Account → Tokens)
+3. In GitHub repo settings → Secrets and variables → Actions, add these repository secrets:
+   - `VERCEL_TOKEN`
+   - `VERCEL_ORG_ID`
+   - `VERCEL_PROJECT_ID`
+   - Optional: `VERCEL_SCOPE` (if you use a team scope)
+4. Push to `main` to trigger a production deployment.
+
+Environment Variables on Vercel:
+- `NEXT_PUBLIC_SITE_URL` = your live origin, used for canonical, OG URLs, `robots.txt`, and `sitemap.xml`.
+
+### Option C — Render or Railway (Node server)
+If you prefer Render/Railway:
+- Build command: `npm install && npm run build`
+- Start command: `npm start`
+- Environment: Node 18; set `NEXT_PUBLIC_SITE_URL`.
+
+## 🔑 Environment Variables
+
+Create these in your hosting provider dashboard (no `.env` committed):
+- `NEXT_PUBLIC_SITE_URL` — e.g., `https://your-domain.com`
+
 ## 📱 Mobile-First Features
 
 ### Navigation
