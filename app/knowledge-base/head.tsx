@@ -1,5 +1,7 @@
+import { getBaseUrl } from '@/lib/site'
+
 export default function Head() {
-  const base = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
+  const base = getBaseUrl()
   const url = `${base}/knowledge-base`
   const title = 'Knowledge Base — SEO Tutorials & How-Tos | SEO MASTER HUB'
   const description = 'Step-by-step SEO tutorials covering Technical SEO, On-Page optimization, Off-Page strategies, analytics, and advanced topics.'

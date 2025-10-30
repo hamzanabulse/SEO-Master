@@ -6,6 +6,7 @@ import ProgressIndicator from '@/components/ProgressIndicator'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import StructuredData from '@/components/StructuredData'
+import { getBaseUrl } from '@/lib/site'
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -18,7 +19,7 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
+  metadataBase: new URL(getBaseUrl()),
   title: 'SEO MASTER HUB - Ultimate SEO Authority Guide',
   description: 'The definitive, comprehensive SEO guide application. Master Technical SEO, On-Page Optimization, Link Building, and Advanced SEO Strategies with mobile-first design.',
   keywords: 'SEO, Search Engine Optimization, Technical SEO, Link Building, Digital Marketing, SEO Guide, SEO Tools',
@@ -27,7 +28,7 @@ export const metadata = {
   openGraph: {
     title: 'SEO MASTER HUB - Ultimate SEO Authority Guide',
     description: 'Master SEO with the most comprehensive guide for Technical SEO, Content Strategy, and Authority Building.',
-    url: 'https://seo-master-hub.com',
+    url: getBaseUrl(),
     siteName: 'SEO MASTER HUB',
     type: 'website',
     images: [
@@ -65,6 +66,9 @@ export default function RootLayout({
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="msapplication-TileColor" content="#0A0A0A" />
         <meta name="theme-color" content="#FF7A00" />
+        {process.env.NEXT_PUBLIC_GSC_VERIFICATION && (
+          <meta name="google-site-verification" content={process.env.NEXT_PUBLIC_GSC_VERIFICATION} />
+        )}
       </head>
       <body className="bg-obsidian text-light-grey antialiased">
         <ProgressIndicator />
@@ -80,8 +84,8 @@ export default function RootLayout({
           '@context': 'https://schema.org',
           '@type': 'Organization',
           name: 'SEO MASTER HUB',
-          url: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
-          logo: `${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/logo.svg`,
+          url: getBaseUrl(),
+          logo: `${getBaseUrl()}/logo.svg`,
           sameAs: [
             'https://www.linkedin.com/in/hamzanabulsii/'
           ]

@@ -1,5 +1,7 @@
+import { getBaseUrl } from '@/lib/site'
+
 export default function Head() {
-  const base = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
+  const base = getBaseUrl()
   const url = `${base}/faq`
   const title = 'FAQ — SEO MASTER HUB | Hamza Nabulsi'
   const description = 'Frequently Asked Questions about SEO Master Hub, SEO best practices, technical SEO, link building and consultations by Hamza Nabulsi.'
