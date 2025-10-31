@@ -61,14 +61,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`}>
-      <head>
+  <head>
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="msapplication-TileColor" content="#0A0A0A" />
         <meta name="theme-color" content="#FF7A00" />
-        {process.env.NEXT_PUBLIC_GSC_VERIFICATION && (
-          <meta name="google-site-verification" content={process.env.NEXT_PUBLIC_GSC_VERIFICATION} />
-        )}
+        {(() => {
+          const token = process.env.NEXT_PUBLIC_GSC_VERIFICATION || 'J9eAu7DpQGXViJ65p3fbCdhYBlI1TxEWT-vu9LufmzY'
+          return token ? (
+            <meta name="google-site-verification" content={token} />
+          ) : null
+        })()}
       </head>
       <body className="bg-obsidian text-light-grey antialiased">
         <ProgressIndicator />
