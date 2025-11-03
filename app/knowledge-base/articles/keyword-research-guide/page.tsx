@@ -5,6 +5,7 @@ import ConsultationCTA from '@/components/ConsultationCTA'
 import CodeBlock from '@/components/CodeBlock'
 import StructuredData from '@/components/StructuredData'
 import BreadcrumbNav from '@/components/BreadcrumbNav'
+import { getBaseUrl } from '@/lib/site'
 
 export const metadata = {
   title: 'Complete Keyword Research Guide — Find & Target Winning Keywords | SEO MASTER HUB',
@@ -24,6 +25,7 @@ const tocItems = [
 ]
 
 export default function KeywordResearchGuide() {
+  const base = getBaseUrl()
   return (
     <div className="content-container">
       <BreadcrumbNav items={[
@@ -336,14 +338,17 @@ export default function KeywordResearchGuide() {
         '@type': 'Article',
         'headline': 'Complete Keyword Research Guide — Find & Target Winning Keywords',
         'author': { '@type': 'Person', 'name': 'Hamza Nabulsi' },
+        'datePublished': '2025-11-03T00:00:00.000Z',
+        'dateModified': '2025-11-03T00:00:00.000Z',
+        'image': [`${base}/knowledge-base/opengraph-image`],
       }} />
       <StructuredData data={{
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
         'itemListElement': [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: (process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000') },
-          { '@type': 'ListItem', position: 2, name: 'Knowledge Base', item: `${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/knowledge-base` },
-          { '@type': 'ListItem', position: 3, name: 'Keyword Research', item: `${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/knowledge-base/articles/keyword-research-guide` },
+          { '@type': 'ListItem', position: 1, name: 'Home', item: base },
+          { '@type': 'ListItem', position: 2, name: 'Knowledge Base', item: `${base}/knowledge-base` },
+          { '@type': 'ListItem', position: 3, name: 'Keyword Research', item: `${base}/knowledge-base/articles/keyword-research-guide` },
         ],
       }} />
     </div>
