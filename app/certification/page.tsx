@@ -18,6 +18,31 @@ function CertificationContent() {
 
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
 
+  // Helper: load an image (e.g., SVG) and convert to PNG data URL for jsPDF
+  const loadImageAsPngDataUrl = (src: string): Promise<{ dataUrl: string; width: number; height: number }> => {
+    return new Promise((resolve, reject) => {
+      const img = new Image();
+      img.crossOrigin = 'anonymous';
+      img.onload = () => {
+        const canvas = document.createElement('canvas');
+        // Use a small upscale for crisper output
+        const scale = 2;
+        canvas.width = img.naturalWidth * scale || img.width * scale || 512;
+        canvas.height = img.naturalHeight * scale || img.height * scale || 512;
+        const ctx = canvas.getContext('2d');
+        if (!ctx) {
+          reject(new Error('Canvas context not available'));
+          return;
+        }
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+        const dataUrl = canvas.toDataURL('image/png');
+        resolve({ dataUrl, width: canvas.width, height: canvas.height });
+      };
+      img.onerror = (e) => reject(e);
+      img.src = src;
+    });
+  };
+
   useEffect(() => {
     // Generate unique certificate ID
     const id = `SEO-${Date.now()}-${Math.random().toString(36).substr(2, 9).toUpperCase()}`;
@@ -47,6 +72,19 @@ function CertificationContent() {
     const width = doc.internal.pageSize.getWidth();
     const height = doc.internal.pageSize.getHeight();
 
+    // Brand logo (from public/logo.svg) — centered above the title
+    try {
+      const { dataUrl: logoDataUrl, width: logoPxW, height: logoPxH } = await loadImageAsPngDataUrl('/logo.svg');
+      const targetWmm = 36; // desired logo width in mm
+      const aspect = logoPxH && logoPxW ? logoPxH / logoPxW : 1;
+      const targetHmm = targetWmm * aspect;
+      const logoX = (width - targetWmm) / 2;
+      const logoY = 14; // top padding
+      doc.addImage(logoDataUrl, 'PNG', logoX, logoY, targetWmm, targetHmm);
+    } catch (_) {
+      // non-blocking if logo fails to load
+    }
+
     // Background watermark
     doc.setGState(new (doc as any).GState({ opacity: 0.06 }));
     doc.setFont('helvetica', 'bold');
@@ -68,7 +106,7 @@ function CertificationContent() {
     doc.setFont('helvetica', 'bold');
     doc.setTextColor(255, 122, 0);
     doc.setFontSize(42);
-    doc.text('CERTIFICATE', width / 2, 40, { align: 'center' });
+  doc.text('CERTIFICATE', width / 2, 40, { align: 'center' });
 
     doc.setFont('helvetica', 'normal');
     doc.setTextColor(120, 120, 120);
