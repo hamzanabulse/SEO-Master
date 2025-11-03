@@ -25,6 +25,12 @@ export const metadata = {
   keywords: 'SEO, Search Engine Optimization, Technical SEO, Link Building, Digital Marketing, SEO Guide, SEO Tools',
   authors: [{ name: 'Hamza Nabulsi', url: 'https://www.linkedin.com/in/hamzanabulsii/' }],
   robots: 'index, follow',
+  alternates: {
+    languages: {
+      en: getBaseUrl(),
+      'x-default': getBaseUrl(),
+    },
+  },
   openGraph: {
     title: 'SEO MASTER HUB - Ultimate SEO Authority Guide',
     description: 'Master SEO with the most comprehensive guide for Technical SEO, Content Strategy, and Authority Building.',
