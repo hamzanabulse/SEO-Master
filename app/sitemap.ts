@@ -25,6 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/knowledge-base/tutorials/schema-implementation',
     '/knowledge-base/tutorials/mobile-seo',
     '/knowledge-base/articles/keyword-research-guide',
+    '/knowledge-base/articles/google-ai-overviews',
     '/knowledge-base/articles/what-is-seo',
     '/knowledge-base/checklists/linking-audit',
     '/knowledge-base/checklists/seo-site-audit',
