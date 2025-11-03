@@ -25,7 +25,7 @@ export default function WhatIsSEOArticle() {
         <p className="text-medium-grey">A practical, beginner-friendly explanation of Search Engine Optimization with clear steps, examples, and the exact next pages to read.</p>
       </header>
 
-      <article className="prose max-w-none">
+  <article className="prose max-w-none">
         <section className="mb-8">
           <h2>SEO in One Sentence</h2>
           <p><strong>Search Engine Optimization (SEO)</strong> is the process of improving your website so people can discover it in search engines like Google for the topics you cover—and trust it enough to click, stay, and convert.</p>
@@ -77,6 +77,10 @@ export default function WhatIsSEOArticle() {
             <li>Promote content to earn links: see <Link className="font-semibold text-system-green" href="/off-page-seo">Off-Page SEO</Link>.</li>
             <li>Track results in <Link className="font-semibold text-system-green" href="/data-analysis">Data Analysis & KPIs</Link> and iterate.</li>
           </ol>
+          <div className="mt-6 p-4 rounded-lg border border-alert-cyan bg-obsidian">
+            <p className="mb-2"><strong>Need expert help?</strong> Get a tailored digital marketing and SEO consultation from Fatcow Digital.</p>
+            <a className="cta-primary inline-block" href="https://fatcowdigital.com" target="_blank" rel="noopener noreferrer">Talk to Fatcow Digital</a>
+          </div>
         </section>
 
         <section className="mb-8">
@@ -108,6 +112,11 @@ export default function WhatIsSEOArticle() {
         dateModified: '2025-11-03T00:00:00.000Z',
         image: [`${base}/opengraph-image`],
         mainEntityOfPage: `${base}/knowledge-base/articles/what-is-seo`,
+        publisher: {
+          '@type': 'Organization',
+          name: 'Fatcow Digital',
+          url: 'https://fatcowdigital.com'
+        },
       }} />
       <StructuredData data={{
         '@context': 'https://schema.org',

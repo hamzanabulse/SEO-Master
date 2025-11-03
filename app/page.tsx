@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { ArrowRight, Target, TrendingUp, Zap, BarChart3, Globe, Award } from 'lucide-react'
-const BANNER_IMG = 'https://media.licdn.com/dms/image/v2/D4D03AQEMpODowtkCHw/profile-displayphoto-scale_400_400/B4DZoqi.R5GQAg-/0/1761650403384?e=1763596800&v=beta&t=4HaItRYtzeCmWrZM9Ch72nt2zAk5D1gs4e8bNmHhV7o'
+const BANNER_IMG = 'https://cdn.shopify.com/s/files/1/0070/7032/articles/seo_20strategy.png?v=1729517573'
 
 export default function HomePage() {
   return (

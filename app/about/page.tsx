@@ -3,7 +3,7 @@ import LinkedInCard from '@/components/LinkedInCard'
 import { getBaseUrl } from '@/lib/site'
 import Link from 'next/link'
 
-const IMG = 'https://media.licdn.com/dms/image/v2/D4D03AQEMpODowtkCHw/profile-displayphoto-scale_400_400/B4DZoqi.R5GQAg-/0/1761650403384?e=1763596800&v=beta&t=4HaItRYtzeCmWrZM9Ch72nt2zAk5D1gs4e8bNmHhV7o'
+const IMG = 'https://cdn.shopify.com/s/files/1/0070/7032/articles/seo_20strategy.png?v=1729517573'
 const LI = 'https://www.linkedin.com/in/hamzanabulsii/'
 
 export const metadata = {
@@ -22,7 +22,7 @@ export default function AboutPage() {
 
       {/* Banner */}
       <div className="mb-8 overflow-hidden rounded-xl border border-system-green">
-        <img src={IMG} alt="Hamza Nabulsi banner" className="w-full h-64 object-cover" />
+        <img src={IMG} alt="SEO strategy banner" className="w-full h-64 object-cover" />
       </div>
 
       <div className="grid gap-6 md:grid-cols-3">
@@ -47,7 +47,7 @@ export default function AboutPage() {
           <LinkedInCard
             name="Hamza Nabulsi"
             title="SEO Strategist — Fatcow Digital"
-            imageUrl={IMG}
+            imageUrl={'https://media.licdn.com/dms/image/v2/D4D03AQEMpODowtkCHw/profile-displayphoto-scale_400_400/B4DZoqi.R5GQAg-/0/1761650403384?e=1763596800&v=beta&t=4HaItRYtzeCmWrZM9Ch72nt2zAk5D1gs4e8bNmHhV7o'}
             profileUrl={LI}
           />
         </div>
