@@ -84,6 +84,94 @@ export default function WhatIsSEOArticle() {
         </section>
 
         <section className="mb-8">
+          <h2>How Do You Measure SEO?</h2>
+          <p>Success shows up as more qualified organic traffic and better visibility for the keywords that matter to your business. Track:</p>
+          <ul>
+            <li><strong>Rankings:</strong> Positions for priority keywords and topics. Focus on groups, not single terms.</li>
+            <li><strong>Traffic & CTR:</strong> Organic sessions and click-through rates (via <Link className="font-semibold text-system-green" href="/data-analysis">Data Analysis</Link> dashboards).</li>
+            <li><strong>Engagement & UX:</strong> Time on page, bounce/return-to-SERP, helpfulness.</li>
+            <li><strong>Conversions:</strong> Leads, trials, purchases—what actually moves the business.</li>
+          </ul>
+        </section>
+
+        <section className="mb-8">
+          <h2>SEO vs. PPC vs. SEM</h2>
+          <p><strong>SEO</strong> earns organic visibility. <strong>PPC</strong> buys clicks through ads. <strong>SEM</strong> is the umbrella that includes both. The best programs combine them—PPC for quick testing and reach, SEO for durable, compounding growth.</p>
+          <p>Start with SEO foundations, then use PPC to validate messaging fast. Feed winning ad copy back into your <Link className="font-semibold text-system-green" href="/on-page-seo">on-page optimization</Link>.</p>
+        </section>
+
+        <section className="mb-8">
+          <h2>How Search Engines Rank Results (Deeper)</h2>
+          <p>While algorithms are proprietary, we know the major buckets:</p>
+          <ul>
+            <li><strong>Meaning & Intent:</strong> Does your content align with what the searcher actually wants?</li>
+            <li><strong>Relevance:</strong> Clear topic coverage, headings, entities, and internal links signal what the page is about.</li>
+            <li><strong>Quality (E‑E‑A‑T):</strong> Demonstrate real experience, expertise, authority, and trustworthiness.</li>
+            <li><strong>Usability:</strong> Mobile friendliness, Core Web Vitals, clean architecture.</li>
+            <li><strong>Context:</strong> Location, language, and personalization can influence results.</li>
+          </ul>
+        </section>
+
+        <section className="mb-8">
+          <h2>Algorithm Updates (What To Do)</h2>
+          <p>Search systems evolve constantly. Chasing loopholes is risky; focus on fundamentals:</p>
+          <ul>
+            <li>Build genuinely helpful content that matches intent.</li>
+            <li>Maintain a fast, stable, and crawlable site—see <Link className="font-semibold text-system-green" href="/technical-seo">Technical SEO</Link>.</li>
+            <li>Earn citations and links by creating assets people value—see <Link className="font-semibold text-system-green" href="/off-page-seo">Off-Page SEO</Link>.</li>
+            <li>Refresh and consolidate pages regularly to avoid thin/duplicate content.</li>
+          </ul>
+        </section>
+
+        <section className="mb-8">
+          <h2>Core Skills for Modern SEO</h2>
+          <ul>
+            <li><strong>Keyword and topic research</strong> to identify demand and intent (<Link className="font-semibold text-system-green" href="/knowledge-base/articles/keyword-research-guide">guide</Link>).</li>
+            <li><strong>Information architecture</strong> and internal linking for discoverability.</li>
+            <li><strong>Editorial excellence</strong>: structure, clarity, originality, and depth.</li>
+            <li><strong>Technical literacy</strong>: CWV, rendering, indexing, schema.</li>
+            <li><strong>Analysis</strong>: tie efforts to outcomes with <Link className="font-semibold text-system-green" href="/data-analysis">measurement</Link>.</li>
+          </ul>
+        </section>
+
+        <section className="mb-8">
+          <h2>SEO Specializations</h2>
+          <ul>
+            <li><strong>Local SEO:</strong> Maps/pack visibility and NAP citations for service areas.</li>
+            <li><strong>Ecommerce SEO:</strong> Category faceting, product data, and scalable internal links.</li>
+            <li><strong>Enterprise SEO:</strong> Complex architectures, templates, and governance.</li>
+            <li><strong>Multilingual/Multiregional:</strong> Hreflang and localization.</li>
+            <li><strong>News/Video:</strong> Freshness, feeds, and platform best practices.</li>
+          </ul>
+        </section>
+
+        <section className="mb-8">
+          <h2>Elements of a Unified SEO Campaign</h2>
+          <h3>1) Technical Site Audit</h3>
+          <p>Find crawl, index, performance, and UX blockers. Start with our <Link className="font-semibold text-system-green" href="/knowledge-base/checklists/seo-site-audit">SEO Site Audit Checklist</Link> and <Link className="font-semibold text-system-green" href="/knowledge-base/checklists/cwv-field-testing">CWV Field Testing</Link>.</p>
+          <h3>2) Keyword & Topic Research</h3>
+          <p>Map topics to intent and difficulty. See the <Link className="font-semibold text-system-green" href="/knowledge-base/articles/keyword-research-guide">Keyword Research Guide</Link>.</p>
+          <h3>3) Content & On‑Page</h3>
+          <p>Match format to intent (guide, comparison, product). Optimize titles, headings, copy, structured data, and internal links—see <Link className="font-semibold text-system-green" href="/on-page-seo">On-Page SEO</Link>.</p>
+          <h3>4) Local (If Applicable)</h3>
+          <p>Complete your Google Business Profile, ensure consistent NAP citations, and collect high‑quality reviews.</p>
+          <h3>5) Links, Citations, Mentions</h3>
+          <p>Create link‑worthy assets and build relationships. Start with <Link className="font-semibold text-system-green" href="/off-page-seo">Authority Building</Link>.</p>
+          <h3>6) Analysis & Iteration</h3>
+          <p>Review rankings, engagement, and conversions monthly. Update content and architecture based on insights—see <Link className="font-semibold text-system-green" href="/data-analysis">Data Analysis</Link>.</p>
+        </section>
+
+        <section className="mb-8">
+          <h2>AI Overviews and LLMs</h2>
+          <p>Generative answers are surfacing in search, but the playbook remains the same: be the best source. Clear intent alignment, expert depth, structured data, and strong UX help both classic results and AI surfaces.</p>
+        </section>
+
+        <section className="mb-8">
+          <h2>Conclusion</h2>
+          <p>SEO compounds. Nail the fundamentals, build topic authority, and keep improving your site’s experience. Use this article as a hub—and continue with our <Link className="font-semibold text-system-green" href="/seo-fundamentals">Fundamentals</Link> and <Link className="font-semibold text-system-green" href="/technical-seo">Technical SEO</Link> pillars.</p>
+        </section>
+
+        <section className="mb-8">
           <h2>Smart Internal Linking (Do This Today)</h2>
           <p>Link related pages together to help users and search engines. From this article, visit:</p>
           <ul>
@@ -96,9 +184,12 @@ export default function WhatIsSEOArticle() {
 
         <section className="mb-8">
           <h2>FAQ</h2>
-          <p><strong>Is SEO still worth it?</strong> Yes—done right, it’s one of the most cost-effective channels for compounding growth.</p>
-          <p><strong>How long to see results?</strong> Often 3–6 months for new sites; faster if you already have authority and fix technical issues early.</p>
-          <p><strong>Do I need backlinks?</strong> High-quality content can rank on low-competition topics, but authoritative links accelerate growth.</p>
+          <p><strong>Is SEO still worth it?</strong> Yes—when you align pages to search intent and deliver helpful experiences, organic growth compounds over time.</p>
+          <p><strong>How long to see results?</strong> It varies by competition and authority. Expect early movement in weeks, meaningful traction in months.</p>
+          <p><strong>Do I need backlinks?</strong> Helpful content can rank on easier topics, but authoritative mentions and links accelerate results.</p>
+          <p><strong>Can I skip SEO and still rank?</strong> Some pages rank organically without deliberate SEO. But a consistent strategy improves predictability and scale.</p>
+          <p><strong>What about “black hat” tricks?</strong> Short‑term tactics often backfire with updates. Invest in durable, user‑first improvements.</p>
+          <p><strong>Should I hire help?</strong> If bandwidth or expertise is limited, partner with specialists. For tailored strategy, consider <a className="font-semibold text-system-green" href="https://fatcowdigital.com" target="_blank" rel="noopener noreferrer">Fatcow Digital</a>.</p>
         </section>
       </article>
 
