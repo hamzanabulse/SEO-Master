@@ -5,6 +5,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const base = getBaseUrl()
   const routes = [
     '',
+    '/about',
+    '/best-seo-expert-in-lebanon',
     '/seo-fundamentals',
     '/technical-seo',
     '/on-page-seo',
@@ -23,6 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/knowledge-base/tutorials/schema-implementation',
     '/knowledge-base/tutorials/mobile-seo',
     '/knowledge-base/articles/keyword-research-guide',
+    '/knowledge-base/articles/what-is-seo',
     '/knowledge-base/checklists/linking-audit',
     '/knowledge-base/checklists/seo-site-audit',
     '/knowledge-base/checklists/cwv-field-testing',

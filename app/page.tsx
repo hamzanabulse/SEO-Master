@@ -1,9 +1,14 @@
 import Link from 'next/link'
 import { ArrowRight, Target, TrendingUp, Zap, BarChart3, Globe, Award } from 'lucide-react'
+const BANNER_IMG = 'https://media.licdn.com/dms/image/v2/D4D03AQEMpODowtkCHw/profile-displayphoto-scale_400_400/B4DZoqi.R5GQAg-/0/1761650403384?e=1763596800&v=beta&t=4HaItRYtzeCmWrZM9Ch72nt2zAk5D1gs4e8bNmHhV7o'
 
 export default function HomePage() {
   return (
     <div className="content-container">
+      {/* Hamza Banner */}
+      <div className="mb-6 overflow-hidden rounded-xl border border-system-green">
+        <img src={BANNER_IMG} alt="Hamza Nabulsi banner" className="w-full h-56 object-cover" />
+      </div>
       {/* Hero Section */}
       <section className="text-center py-16 px-4">
         <h1 className="text-4xl md:text-6xl font-bold mb-6 text-glow">
@@ -122,6 +127,24 @@ export default function HomePage() {
         >
           Begin SEO Mastery
           <ArrowRight className="w-5 h-5" />
+        </Link>
+      </section>
+
+      {/* About & Expert CTAs */}
+      <section className="grid gap-4 md:grid-cols-2 mb-12">
+        <Link href="/about" className="group">
+          <div className="bg-dark-grey border border-system-green rounded-lg p-6 h-full">
+            <h3 className="text-xl font-semibold mb-2 group-hover:text-system-green">About Hamza Nabulsi</h3>
+            <p className="text-medium-grey mb-3">SEO strategist and creator of SEO MASTER HUB.</p>
+            <span className="cta-link">Learn more →</span>
+          </div>
+        </Link>
+        <Link href="/best-seo-expert-in-lebanon" className="group">
+          <div className="bg-dark-grey border border-alert-cyan rounded-lg p-6 h-full">
+            <h3 className="text-xl font-semibold mb-2 group-hover:text-system-green">Best SEO Expert in Lebanon</h3>
+            <p className="text-medium-grey mb-3">Work with Hamza — Technical SEO, content strategy, and authority building.</p>
+            <span className="cta-link">Explore services →</span>
+          </div>
         </Link>
       </section>
     </div>

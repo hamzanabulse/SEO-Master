@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { Menu, X, Home, Target, Zap, TrendingUp, Globe, BarChart3, Award, GraduationCap, ShieldCheck } from 'lucide-react'
+import { Menu, X, Home, Target, Zap, TrendingUp, Globe, BarChart3, Award, GraduationCap, ShieldCheck, User, BadgeCheck } from 'lucide-react'
 
 const navigationItems = [
   { href: '/', label: 'Home', icon: Home },
@@ -14,6 +14,8 @@ const navigationItems = [
   { href: '/advanced-seo', label: 'Advanced & Specialized SEO', icon: Award },
   { href: '/quiz', label: 'Quiz & Certification', icon: GraduationCap },
   { href: '/verify', label: 'Verify Certificate', icon: ShieldCheck },
+  { href: '/about', label: 'About', icon: User },
+  { href: '/best-seo-expert-in-lebanon', label: 'Best SEO Expert (LB)', icon: BadgeCheck },
 ]
 
 export default function Navigation() {
